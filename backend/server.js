@@ -9,9 +9,13 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get("/",(req,res)=>{
+  return res.status(200).send('Hello');
+});
+
 app.post("/compile", (req, res) => {
   let { code, inp, type } = req.body;
-  console.log("req.body", req.body);
+  // console.log("req.body", req.body);
   switch (type) {
     case "cpp":
       fs.writeFile("./code.cpp", code, error => {
@@ -50,7 +54,7 @@ app.post("/compile", (req, res) => {
           if (error) {
             console.error(error);
             output = { out: error, status: 500 };
-            return res.json({ out: error.message, status: 501 });
+            return res.status(500).json({ out: error.message, status: 501 });
           }
 
           if (stderr) {
@@ -63,9 +67,11 @@ app.post("/compile", (req, res) => {
       });
       break;
     default:
-      return res.json({ out: "make sure to have correct file", status: 501 });
+      return res.status(501).json({ out: "make sure to have correct file", status: 501 });
   }
 });
 
 let port = 5000 || process.env.PORT;
 app.listen(port, () => console.log(`listening on ${port}`));
+
+module.exports = app; // for testing
