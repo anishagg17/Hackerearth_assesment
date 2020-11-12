@@ -155,9 +155,9 @@ class App extends Component {
             {Object.keys(this.state.files).map(name => (
               <div
                 key={name}
+                id={`${name.split('.')[1]}`}
                 style={{
                   fontSize: 16,
-                  // fontFamily: "regular",
                   fontWeight: "600",
                   padding: "8px 24px",
                   backgroundColor:
@@ -175,6 +175,7 @@ class App extends Component {
           <NewFile>
             <input
               value={this.state.newFile}
+              ref="new_file"
               onChange={e => {
                 this.setState({ newFile: e.target.value });
               }}
@@ -189,9 +190,9 @@ class App extends Component {
         />
         <IO>
           <div>Input</div>
-          <textarea value={input} name="input" onChange={this.handleIOChange} />
+          <textarea value={input} id="in_textarea" name="input" onChange={this.handleIOChange} />
           <div>Output</div>
-          <textarea value={output} name="output" readOnly color={color} />
+          <textarea value={output} id="out_textarea" name="output" readOnly color={color} />
           <button onClick={this.handelCompile} disabled={loading} type="submit">
             {loading ? "Loading" : "Compile"}
           </button>

@@ -19,10 +19,10 @@ const IO = styled.div`
 
 class IdeEditor extends Component {
   render() {
-    let { path, value, onValueChange } = this.props;
+    let { value } = this.props;
     return (
       <IO>
-        <textarea value={value} onChange={onValueChange} />
+        <textarea ref="code_input" name="code_input" value={value} onChange={this.props.onValueChange} />
       </IO>
     );
   }

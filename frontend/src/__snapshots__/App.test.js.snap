@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`=> App snapshot renders 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "fontFamily": "sans-serif",
+      "height": "100vh",
+      "justifyContent": "space-between",
+      "width": "100vw",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#1a2235",
+        "borderRight": "1px solid rgba(0, 0, 0, .08)",
+        "color": "white",
+        "width": "17vw",
+      }
+    }
+  >
+    <div>
+      <div
+        id="cpp"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "rgba(52, 205, 215, 1)",
+            "cursor": "pointer",
+            "fontSize": 16,
+            "fontWeight": "600",
+            "padding": "8px 24px",
+          }
+        }
+      >
+        App.cpp
+      </div>
+      <div
+        id="py"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "cursor": "pointer",
+            "fontSize": 16,
+            "fontWeight": "600",
+            "padding": "8px 24px",
+          }
+        }
+      >
+        App.py
+      </div>
+    </div>
+    <div
+      className="sc-dlfnbm jVVLvC"
+    >
+      <input
+        onChange={[Function]}
+        value=""
+      />
+      <button
+        onClick={[Function]}
+      >
+        New
+      </button>
+    </div>
+  </div>
+  <div
+    className="sc-bdfBwQ cdrEyf"
+  >
+    <textarea
+      name="code_input"
+      onChange={[Function]}
+      value="#include<iostream> 
+ using namespace std;    
+ int main(){ 
+ cout<<'2'; 
+ return 0; 
+ }"
+    />
+  </div>
+  <div
+    className="sc-gsTCUz hPsmcW"
+  >
+    <div>
+      Input
+    </div>
+    <textarea
+      id="in_textarea"
+      name="input"
+      onChange={[Function]}
+      value=""
+    />
+    <div>
+      Output
+    </div>
+    <textarea
+      color="white"
+      id="out_textarea"
+      name="output"
+      readOnly={true}
+      value=""
+    />
+    <button
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      Compile
+    </button>
+  </div>
+</div>
+`;
