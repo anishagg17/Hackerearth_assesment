@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Enzyme, {shallow} from 'enzyme';
-import IdeEditor from './Editor'
+import IdeEditor from '../components/Editor'
 import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() })

@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './App';
+import App from '../App';
 import renderer from 'react-test-renderer';
 import enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

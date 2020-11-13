@@ -1,4 +1,4 @@
-import {Compile} from './Compile'
+import {Compile} from '../components/Compile'
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
