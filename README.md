@@ -43,3 +43,8 @@ cd frontend
 npm test
 ```
 
+##### Production build
+```
+cd frontend
+npm build
+```
