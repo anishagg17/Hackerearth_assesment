@@ -17,12 +17,18 @@ const IO = styled.div`
   }
 `;
 
+/**
+ * 
+ * @prop {String} value 
+ * @prop {Function} onValueChange 
+ */
+
 class IdeEditor extends Component {
   render() {
-    let { value } = this.props;
+    let { value, onValueChange} = this.props;
     return (
       <IO>
-        <textarea ref="code_input" name="code_input" value={value} onChange={this.props.onValueChange} />
+        <textarea ref="code_input" name="code_input" value={value} onChange={onValueChange} />
       </IO>
     );
   }

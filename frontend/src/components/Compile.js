@@ -1,3 +1,11 @@
+/**
+ * 
+ * @param {String} code 
+ * @param {String} inp 
+ * @param {String} out 
+ * @param {String} current 
+ */
+
 export const Compile = async (code, inp, out, current) => {
   let url = "http://localhost:5000/";
 
