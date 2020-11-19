@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`=> IdeEditor component snapshot renders 1`] = `
+<div
+  className="Editor__IO-sc-1elg8pc-0 huzPE"
+>
+  <textarea
+    name="code_input"
+  />
+</div>
+`;
